@@ -4,19 +4,19 @@ const videoRouter=express.Router();
 
 let a=[];
 
-videoRouter.get('/video',(res,req)=>{
+videoRouter.get('/video',(req,res)=>{
     res.send(a);
 })
-videoRouter.post('/video',(res,req)=>{
+videoRouter.post('/video',(req,res)=>{
     a.push(1);
     res.send(a);
 })
-videoRouter.put('/video',(res,req)=>{
+videoRouter.put('/video',(req,res)=>{
     a[0]=2;
     res.send(a);
 })
-videoRouter.delete('/video',(res,req)=>{
+videoRouter.delete('/video',(req,res)=>{
     a.pop();
     res.send(a);
 })
-module.export=videoRouter;
+module.exports=videoRouter;
